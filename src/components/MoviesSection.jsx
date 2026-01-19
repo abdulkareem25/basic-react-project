@@ -1,18 +1,9 @@
-// Sample movie data - replace with your own logic
-const sampleMovies = [
-    { id: 1, title: "Terminator Genisys", year: 2015, poster: "https://via.placeholder.com/200x300?text=Terminator+Genisys" },
-    { id: 2, title: "The Terminator", year: 1984, poster: "https://via.placeholder.com/200x300?text=The+Terminator" },
-    { id: 3, title: "Terminator 2: Judgment Day", year: 1991, poster: "https://via.placeholder.com/200x300?text=T2" },
-    { id: 4, title: "South Terminal", year: 2019, poster: "https://via.placeholder.com/200x300?text=South+Terminal" },
-    { id: 5, title: "Terminator: Dark Fate", year: 2019, poster: "https://via.placeholder.com/200x300?text=Dark+Fate" },
-    { id: 6, title: "Terminator 3: Rise of the Machines", year: 2003, poster: "https://via.placeholder.com/200x300?text=T3" },
-    { id: 7, title: "Angel Terminators", year: 2018, poster: "https://via.placeholder.com/200x300?text=Angel+Terminators" },
-    { id: 8, title: "Terminator Salvation", year: 2009, poster: "https://via.placeholder.com/200x300?text=Salvation" },
-    { id: 9, title: "Japanese Movie", year: 2020, poster: "https://via.placeholder.com/200x300?text=Japanese+Movie" },
-    { id: 10, title: "Sci-Fi Action", year: 2021, poster: "https://via.placeholder.com/200x300?text=Sci-Fi+Action" },
-];
+import { useContext } from "react"
+import { MoviesContext } from "../contexts/MoviesProvider"
 
 const MoviesSection = () => {
+    const sampleMovies = useContext(MoviesContext);
+
     return (
         <section className="movies-section">
             <div className="movies-grid">
