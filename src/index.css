@@ -171,10 +171,10 @@ body {
 }
 
 .movies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  justify-items: center;
 }
 
 /* Movie Card */
@@ -183,8 +183,8 @@ body {
   flex-direction: column;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: 100%;
-  max-width: 170px;
+  width: 170px;
+  flex-shrink: 0;
 }
 
 .movie-card:hover {
