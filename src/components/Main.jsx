@@ -4,12 +4,12 @@ import { useContext } from "react"
 import { MoviesContext } from "../contexts/MoviesProvider"
 
 const Main = () => {
-    const movies = useContext(MoviesContext);
+    const { movies, toggleFavorite } = useContext(MoviesContext);
 
     return (
         <main className="main-content">
             <SearchSection />
-            <MoviesSection movies={movies} />
+            <MoviesSection movies={movies} toggleFavorite={toggleFavorite} />
         </main>
     )
 }
