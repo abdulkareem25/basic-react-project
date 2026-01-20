@@ -143,28 +143,6 @@ body {
   box-shadow: 0 0 15px rgba(229, 9, 20, 0.2);
 }
 
-.search-btn {
-  padding: 0.75rem 2.5rem;
-  background-color: var(--accent-red);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.search-btn:hover {
-  background-color: #cc070d;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
-}
-
-.search-btn:active {
-  transform: translateY(0);
-}
-
 /* Movies Section */
 .movies-section {
   width: 100%;

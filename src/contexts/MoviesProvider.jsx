@@ -4,6 +4,7 @@ export const MoviesContext = createContext();
 
 const MoviesProvider = ({ children }) => {
     const [movies, setMovies] = useState([]);
+    const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
         setMovies([
@@ -36,8 +37,12 @@ const MoviesProvider = ({ children }) => {
         ))
     }
 
+    const filteredMovies = movies.filter(movie =>
+        movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
     return (
-        <MoviesContext.Provider value={{ movies, toggleFavorite }} >
+        <MoviesContext.Provider value={{ movies, filteredMovies, toggleFavorite, searchQuery, setSearchQuery }} >
             {children}
         </MoviesContext.Provider>
     )
