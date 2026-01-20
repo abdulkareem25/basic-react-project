@@ -2,12 +2,12 @@ import { useContext } from "react"
 import { MoviesContext } from "../contexts/MoviesProvider"
 
 const MoviesSection = () => {
-    const sampleMovies = useContext(MoviesContext);
+    const movies = useContext(MoviesContext);
 
     return (
         <section className="movies-section">
             <div className="movies-grid">
-                {sampleMovies.map((movie) => (
+                {movies.map((movie) => (
                     <div key={movie.id} className="movie-card">
                         <div className="movie-poster">
                             <img src={movie.poster} alt={movie.title} />
