@@ -1,11 +1,14 @@
-import Header from './components/Header';
-import Main from './components/Main';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Favorites from './pages/Favorites';
 
 const App = () => {
   return (
     <div className="app">
-      <Header />
-      <Main />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/favorites' element={<Favorites />} />
+      </Routes>
     </div>
   )
 }

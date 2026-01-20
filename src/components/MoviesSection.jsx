@@ -1,8 +1,5 @@
-import { useContext } from "react"
-import { MoviesContext } from "../contexts/MoviesProvider"
 
-const MoviesSection = () => {
-    const movies = useContext(MoviesContext);
+const MoviesSection = ({ movies }) => {
 
     return (
         <section className="movies-section">

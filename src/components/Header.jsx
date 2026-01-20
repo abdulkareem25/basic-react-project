@@ -1,11 +1,13 @@
+import { NavLink } from "react-router-dom"
+
 const Header = () => {
     return (
         <header className="header">
             <div className="header-container">
                 <div className="logo">Movie App</div>
                 <nav className="nav">
-                    <a href="#" className="nav-link">Home</a>
-                    <a href="#" className="nav-link">Favorites</a>
+                    <NavLink className="nav-link" to={'/'}>Home</NavLink>
+                    <NavLink className="nav-link" to={'/favorites'}>Favorites</NavLink>
                 </nav>
             </div>
         </header>

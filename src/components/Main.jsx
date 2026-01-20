@@ -1,14 +1,15 @@
 import MoviesSection from "./MoviesSection"
 import SearchSection from "./SearchSection"
+import { useContext } from "react"
+import { MoviesContext } from "../contexts/MoviesProvider"
 
 const Main = () => {
+    const movies = useContext(MoviesContext);
+
     return (
         <main className="main-content">
-            {/* Search Section */}
             <SearchSection />
-
-            {/* Movies Grid */}
-            <MoviesSection />
+            <MoviesSection movies={movies} />
         </main>
     )
 }
